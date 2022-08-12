@@ -1,4 +1,4 @@
-# Program detects if user has the newest version of Maya (2022), by looknig through their list of softwares installed.
+# Program detects to see if user has the newest version of Maya (2022), by looking through their list of softwares installed.
 
 import subprocess
 # Check all softwares installed on current pc
