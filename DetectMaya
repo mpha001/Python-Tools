@@ -1,0 +1,23 @@
+# Program detects if user has the newest version of Maya (2022), by looknig through their list of softwares installed.
+
+import subprocess
+# Check all softwares installed on current pc
+softwares = subprocess.check_output(['wmic', 'product', 'get', 'name'])
+x = str(softwares)
+  
+# try block
+try:
+    
+    # arrange the string
+    for i in range(len(x)):
+        print(x.split("\\r\\r\\n")[6:][i])
+        
+# Displays result when scanning finished
+except IndexError as y:
+    print("Finished scanning.")
+    
+# Checks to see if user has the updated version of Autodesk Maya in the software list.
+if "Autodesk Maya 2022" in x:
+    print("You have the up-to-date version of Maya.")
+else:
+    print("You do not have the up-to-date version of Maya.")
