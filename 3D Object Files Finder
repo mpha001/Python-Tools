@@ -6,17 +6,17 @@ from os import listdir
 import fnmatch
 
 # Replace with your directory
-folder = "E:/objects"
+folder = "E:/001"
 
-# Lists all 3D objects with names inside directory path including .obj, .fbx 
+# Lists all 3D objects with names inside directory path 
 for objects in os.listdir(folder):
 	
-
 	if (objects.endswith(".obj")\
 		or objects.endswith(".fbx")):
 		
 		print(objects)
 		
+
 
 # Count number of objects in total
 count  = len(fnmatch.filter(os.listdir(folder), '*.obj*'))
