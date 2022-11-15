@@ -1,0 +1,23 @@
+# This script scans all existing 3D models in directory folder provided by user, then counts the number of objects altogether. 
+
+# Import modules
+import os
+from os import listdir
+import fnmatch
+
+# Replace with your directory
+folder = "E:/objects"
+
+# Lists all 3D objects with names inside directory path including .obj, .fbx 
+for objects in os.listdir(folder):
+	
+
+	if (objects.endswith(".obj")\
+		or objects.endswith(".fbx")):
+		
+		print(objects)
+		
+
+# Count number of objects in total
+count  = len(fnmatch.filter(os.listdir(folder), '*.obj*'))
+print('File Count:', count)
