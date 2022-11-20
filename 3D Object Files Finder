@@ -6,7 +6,7 @@ from os import listdir
 import fnmatch
 
 # Replace with your directory
-folder = "E:/Wildcat_Onca"
+folder = "E:/3D"
 
 # Lists all 3D objects with names inside directory path 
 for objects in os.listdir(folder):
