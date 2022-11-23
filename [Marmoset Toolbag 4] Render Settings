@@ -1,0 +1,7 @@
+import mset
+
+scene = mset.getAllObjects()
+
+for o in scene:
+    if isinstance(o, mset.RenderObject):
+        ro: mset.RenderObject = o
