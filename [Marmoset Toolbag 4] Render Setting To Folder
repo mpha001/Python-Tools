@@ -1,0 +1,26 @@
+"""This program renders the image into the any folder desired under the 'Output Settings'
+Code sampled from 'Adjust Render Settings' example.
+"""
+import mset
+
+scene = mset.getAllObjects()
+
+for x in scene:
+    if isinstance(x, mset.RenderObject):
+        ro: mset.RenderObject = x
+
+        # Render Settings
+        ro.options.useRayTracing = False
+
+        # Output Settings
+        ro.images.outputPath = "E:/MarmosetImages"
+
+        for rp in ro.renderPasses:
+            rp.enabled = True
+        for camRef in ro.cameras:
+            cam = camRef.camera
+            cam.name = "Render " + cam.name
+            camRef.enabled = True
+
+        # Export Image
+        ro.renderImages()
