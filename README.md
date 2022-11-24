@@ -1,2 +1,2 @@
 # Python-Tools
-This is my repository consisting of useful tools that I create and experiment with to support graphical programs and assets
+This is my repository consisting of useful tools to support graphical programs and 3D assets. 
