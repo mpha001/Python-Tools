@@ -1,4 +1,4 @@
-# This script scans all existing 3D models in directory folder provided by user, then counts objects altogether. 
+"""This script scans all existing 3D models in directory folder provided by user, then counts objects altogether. """"
 
 # Import modules
 import os
