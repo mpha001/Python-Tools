@@ -1,5 +1,5 @@
 """This program renders the image into the any folder desired under the 'Output Settings'
-Code sampled from 'Adjust Render Settings' example.
+Partial code sampled from 'Adjust Render Settings' example.
 """
 import mset
 
