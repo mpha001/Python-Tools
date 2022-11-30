@@ -1,4 +1,5 @@
-"""This program renders the image into the any folder desired under the 'Output Settings'
+"""
+This program renders the image into the any folder desired under the 'Output Settings'
 Partial code sampled from 'Adjust Render Settings' example.
 """
 import mset
