@@ -1,34 +1,42 @@
+""" 
+This program will setup 3 lights with fixed positioning. 
+It will open a UI window, with buttons ('Key Light', 'Back Light', 'Fill Light'), where upon clicking them will add a light object in each defined position.
+"""
+
+
 import mset
 
 #create a window
 mywindow = mset.UIWindow("My Window")
 
-
-def frontlight():
+# Make key light
+def keylight():
 	x = mset.LightObject()
 	x.lightType = "spot"
-	x.name = "Front Light"
-	x.brightness = 20 # value is glitched?
+	x.name = "Key Light"
+	x.brightness = 7
 	x.position = [-192.0, 355.8, 399.0]
 	x.scale = [1.0, 1.0, 1.0]
 	x.rotation = [-33.27, -23.29, 14.64]
 	x.pivot = [0.0, 10.0, 0.0]
 
+# Make back light
 def backlight():
 	y = mset.LightObject()
 	y.lightType = "spot"
 	y.name = "Back Light"
-	y.brightness = 20 # value is glitched?
+	y.brightness = 7
 	y.position = [-217.2, 225.1, -494.5]
 	y.scale = [1.0, 1.0, 1.0]
 	y.rotation = [-19.67, -159.4, 3.758]
 	y.pivot = [0.0, 10.0, 0.0]
 
+# Make fill light
 def fill_light():
 	z = mset.LightObject()
 	z.lightType = "spot"
 	z.name = "Fill Light"
-	z.brightness = 20 # value is glitched?
+	z.brightness = 7
 	z.position = [338.3, -79.58, -263.7]
 	z.scale = [1.0, 1.0, 1.0]
 	z.rotation = [11.91, -213.6, -6.954]
@@ -38,21 +46,15 @@ def fill_light():
 
 # Make the buttons to recall each function
 
-mybuttonx = mset.UIButton("Front light")
-mybuttonx.onClick = frontlight
-
-mywindow.addElement(mybuttonx)
-
-
-
+mybuttonx = mset.UIButton("Key Light")
 mybuttony = mset.UIButton("Back Light")
-mybuttony.onClick = backlight
-
-mywindow.addElement(mybuttony)
-
-
-
 mybuttonz = mset.UIButton("Fill Light")
+
+mybuttonx.onClick = keylight
+mybuttony.onClick = backlight
 mybuttonz.onClick = fill_light
 
+mywindow.addElement(mybuttonx)
+mywindow.addElement(mybuttony)
 mywindow.addElement(mybuttonz)
+
